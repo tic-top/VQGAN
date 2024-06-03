@@ -174,3 +174,4 @@ class CocoImagesAndCaptionsValidation(CocoBase):
 
     def get_split(self):
         return "validation"
+

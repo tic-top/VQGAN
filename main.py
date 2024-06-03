@@ -4,6 +4,8 @@ from omegaconf import OmegaConf
 # from PIL import Image
 # import torch
 # import torchvision
+import warnings
+warnings.filterwarnings("ignore")
 
 import pytorch_lightning as pl
 from pytorch_lightning import seed_everything
@@ -222,7 +224,6 @@ if __name__ == "__main__":
                 "dirpath": ckptdir,
                 "filename": "{epoch:06}",
                 "verbose": True,
-                "save_last": True,
             }
         }
         if hasattr(model, "monitor"):
