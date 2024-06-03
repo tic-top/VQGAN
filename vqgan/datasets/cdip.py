@@ -141,23 +141,22 @@ class CDIPTrain(CDIPBase):
     def __init__(self, size):
         super().__init__()
     def __len__(self):
-        return 99999999
+        return 999999999
 
 class CDIPTest(CDIPBase):
     def __init__(self, size):
         super().__init__()
     def __len__(self):
-        return 16
-
-
+        return 64
 
 if __name__ == "__main__":
     # test the CDIPBase
-    cdip = CDIPBase()
+    cdip = CDIPBase(size=512)
     print(len(cdip))
     # save cdip[0]['image'] to a file
     img = cdip[0]['image']
     img = (img + 1.0) * 127.5
     img = img.astype(np.uint8)
     img = Image.fromarray(img)
+    print(img.size)
     img.save("test.png")

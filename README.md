@@ -170,7 +170,7 @@ or
 `python main.py --base configs/open_images_scene_images_transformer.yaml -t True --gpus 0,`
 
 `python main.py --base configs/cdip_vqgan.yaml -r True -t True --gpus 4,5,6,7`
-`python main.py --base configs/cdip_vqgan_512.yaml -t True --gpus 0,1,2,3,4,5,6,7`
+`python main.py --base configs/cdip_vqgan_512.yaml -t True --gpus 0,1,2,3,4,5`
 ### Sampling 
 Train a model as described above or download a pre-trained model:
  - [Open Images 1 billion parameter model](https://drive.google.com/file/d/1FEK-Z7hyWJBvFWQF50pzSK9y1W_CJEig/view?usp=sharing) available that trained 100 epochs. On 256x256 pixels, FID 41.48±0.21, SceneFID 14.60±0.15, Inception Score 18.47±0.27. The model was trained with 2d crops of images and is thus well-prepared for the task of generating high-resolution images, e.g. 512x512.
